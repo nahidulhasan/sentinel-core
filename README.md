@@ -26,5 +26,3 @@
 
 ## Project layout
 See `/internal` for core app code and `/cmd/api` for app entrypoint.
-
-# sentinel-core
