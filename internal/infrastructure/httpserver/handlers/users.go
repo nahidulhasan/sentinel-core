@@ -6,15 +6,16 @@ import (
 
     "github.com/jmoiron/sqlx"
     "github.com/go-chi/chi/v5"
-    "github.com/nahidulhasan/sentinel-core/internal/domain/user"
+
+    "github.com/nahidulhasan/sentinel-core/internal/infrastructure/repository"
     "github.com/nahidulhasan/sentinel-core/internal/usecase/usercase"
 )
-
 
 func NewUserRouter(db *sqlx.DB) http.Handler {
     r := chi.NewRouter()
 
-    repo := user.NewPostgresRepo(db)
+    // FIXED: use infrastructure repo, not domain
+    repo := repository.NewPostgresUserRepo(db)
     svc := usercase.NewUserService(repo)
 
     r.Get("/users", ListUsers(svc))
