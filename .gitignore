@@ -1,0 +1,7 @@
+/bin/
+/vendor/
+/.env
+*.log
+/mocks/
+/coverage.out
+/mnt/data/

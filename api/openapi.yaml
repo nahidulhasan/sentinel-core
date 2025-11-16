@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: sentinel-core API
+  version: "0.1.0"
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: ok
+  /v1/users:
+    get:
+      summary: List users
+      responses:
+        '200':
+          description: list
+    post:
+      summary: Create user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+      responses:
+        '201':
+          description: created

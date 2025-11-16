@@ -1,0 +1,11 @@
+server:
+  host: "0.0.0.0"
+  port: 8086
+
+db:
+  driver: "postgres"
+  dsn: "postgres://postgres:postgres@localhost:5432/sentinel_dev?sslmode=disable"
+
+jwt:
+  secret: "acfe37859b43a41c31a7b51a14ff73b420767cbfd3e4f1e8b6f4e6e1c2e5d6f7"
+  ttl_minutes: 60
