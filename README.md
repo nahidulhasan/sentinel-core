@@ -10,7 +10,6 @@
 - Structured logging (zerolog)
 - JWT auth skeleton
 - Docker + docker-compose
-- GitHub Actions CI (unit tests)
 - Example unit tests
 
 ## Quick start (development)
